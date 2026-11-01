@@ -1,0 +1,317 @@
+{
+  "metadata": {
+    "name": "RescueRoute Real-World Food Recovery & Vehicle Dispatch Benchmark",
+    "version": "1.0.0",
+    "standards_cited": [
+      {
+        "authority": "USDA Food Safety and Inspection Service (FSIS)",
+        "document": "The 'Danger Zone' (40 °F - 140 °F) & Two-Hour Food Safety Rule",
+        "url": "https://www.fsis.usda.gov/food-safety/safe-food-handling-and-preparation/food-safety-basics/danger-zone-40f-140f"
+      },
+      {
+        "authority": "FDA Food Code (2022 Edition)",
+        "document": "Section 3-501.16: Time/Temperature Control for Safety Food",
+        "url": "https://www.fda.gov/food/fda-food-code/food-code-2022"
+      },
+      {
+        "authority": "Feeding America",
+        "document": "Meal Calculation Standard (1.2 lbs = 1 meal)",
+        "url": "https://www.feedingamerica.org/ways-to-give/faq/about-our-work"
+      },
+      {
+        "authority": "U.S. EPA WARM (Waste Reduction Model)",
+        "document": "Food Waste Landfill Diversion Emissions Factor (2.5 lbs CO2e/lb food)",
+        "url": "https://www.epa.gov/warm"
+      },
+      {
+        "authority": "Edmunds / EPA Vehicle Cargo Capacities",
+        "document": "Standard Vehicle Trunk & Payload Limits (Sedan ~14 cu.ft / SUV ~38 cu.ft)",
+        "url": "https://www.edmunds.com/car-reviews/"
+      }
+    ]
+  },
+  "timestamp": "2026-11-01T15:53:52.318Z",
+  "verdict": "PASS",
+  "summary": {
+    "total": 20,
+    "passed": 20,
+    "failed": 0,
+    "passRatePercent": 100
+  },
+  "results": [
+    {
+      "id": "VAL-01",
+      "tier": "Basic",
+      "category": "Meal Math Standard",
+      "title": "Feeding America Standard Meal Calculation (60 lbs)",
+      "status": "PASS",
+      "observation": "Accurate: 50 meals provided, 150 lbs CO2e averted.",
+      "metricResult": {
+        "calculatedMeals": 50,
+        "calculatedCo2": 150
+      },
+      "source": "Feeding America FAQ (1.2 lbs/meal) & EPA WARM factor (2.5 lbs CO2e/lb)",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-02",
+      "tier": "Basic",
+      "category": "Cold-Chain Urgency",
+      "title": "Perishable Hot Food with 25 Minutes Remaining (Critical Alert)",
+      "status": "PASS",
+      "observation": "Correctly flagged CRITICAL alert at 25 minutes remaining.",
+      "metricResult": {
+        "urgency": "critical"
+      },
+      "source": "USDA FSIS Two-Hour Safety Guideline",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-03",
+      "tier": "Basic",
+      "category": "Cold-Chain Urgency",
+      "title": "Chilled Dairy with 75 Minutes Remaining (Warning Alert)",
+      "status": "PASS",
+      "observation": "Correctly flagged WARNING alert at 75 minutes remaining.",
+      "metricResult": {
+        "urgency": "warning"
+      },
+      "source": "USDA FSIS Two-Hour Safety Guideline",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-04",
+      "tier": "Basic",
+      "category": "Vehicle Recommendation",
+      "title": "Bakery Bread 45 lbs (Compact Sedan Fit)",
+      "status": "PASS",
+      "observation": "Properly matched 45 lbs bakery bread to Compact Sedan (Capacity: 90 lbs).",
+      "metricResult": {
+        "recommendedVehicle": "compact_sedan",
+        "capacity": 90
+      },
+      "source": "Edmunds Compact Sedan Trunk Specs (< 90 lbs)",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-05",
+      "tier": "Intermediate",
+      "category": "Vehicle Recommendation",
+      "title": "Wholesale Produce 130 lbs (Hatchback/CUV Required)",
+      "status": "PASS",
+      "observation": "Prevented compact sedan overload; assigned Hatchback/CUV for 130 lbs cargo.",
+      "metricResult": {
+        "recommendedVehicle": "hatchback_midsize"
+      },
+      "source": "Edmunds CUV Specifications (75-180 lbs)",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-06",
+      "tier": "Intermediate",
+      "category": "Vehicle Recommendation",
+      "title": "Supermarket Pallet Dairy 240 lbs (SUV/Van Required)",
+      "status": "PASS",
+      "observation": "Assigned SUV/Van for 240 lbs bulk dairy crates.",
+      "metricResult": {
+        "recommendedVehicle": "suv_van"
+      },
+      "source": "Edmunds Minivan/SUV Specifications (180-400 lbs)",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-07",
+      "tier": "Intermediate",
+      "category": "Route Optimization",
+      "title": "Multi-Stop Sequencing with Urgency Prioritization",
+      "status": "PASS",
+      "observation": "TSP algorithm sequenced Critical Perishable stop FIRST before normal run, respecting cold-chain limits.",
+      "metricResult": {
+        "firstStopRunId": "R-critical",
+        "totalMiles": 0.7
+      },
+      "source": "USDA Cold-Chain Priority Rules: Critical perishables must be collected first",
+      "durationMs": 1
+    },
+    {
+      "id": "VAL-08",
+      "tier": "Intermediate",
+      "category": "Distance Calculation",
+      "title": "Haversine Distance Between SF Metro Nodes (Downtown to Campus)",
+      "status": "PASS",
+      "observation": "Haversine distance accurate: 0.6 miles between downtown nodes.",
+      "metricResult": {
+        "distanceMiles": 0.6
+      },
+      "source": "Great Circle / Haversine Distance Formula",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-09",
+      "tier": "Advanced",
+      "category": "Cold-Chain Safety Border",
+      "title": "Hot Food Borderline Temperature (141°F Safe)",
+      "status": "PASS",
+      "observation": "FDA compliance verified: 141°F for hot_holding evaluates to safe=true.",
+      "metricResult": {
+        "temperatureF": 141,
+        "storage": "hot_holding",
+        "isSafe": true
+      },
+      "source": "FDA Food Code: Hot holding must maintain >= 140°F",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-10",
+      "tier": "Advanced",
+      "category": "Cold-Chain Safety Border",
+      "title": "Hot Food Danger Zone Violation (138°F Unsafe)",
+      "status": "PASS",
+      "observation": "FDA compliance verified: 138°F for hot_holding evaluates to safe=false.",
+      "metricResult": {
+        "temperatureF": 138,
+        "storage": "hot_holding",
+        "isSafe": false
+      },
+      "source": "FDA Food Code: Hot holding below 140°F is in Danger Zone",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-11",
+      "tier": "Advanced",
+      "category": "Cold-Chain Safety Border",
+      "title": "Chilled Dairy Borderline Temperature (40°F Safe)",
+      "status": "PASS",
+      "observation": "FDA compliance verified: 40°F for chilled evaluates to safe=true.",
+      "metricResult": {
+        "temperatureF": 40,
+        "storage": "chilled",
+        "isSafe": true
+      },
+      "source": "FDA Food Code: Cold food must maintain <= 41°F",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-12",
+      "tier": "Advanced",
+      "category": "Cold-Chain Safety Border",
+      "title": "Chilled Dairy Danger Zone Violation (46°F Unsafe)",
+      "status": "PASS",
+      "observation": "FDA compliance verified: 46°F for chilled evaluates to safe=false.",
+      "metricResult": {
+        "temperatureF": 46,
+        "storage": "chilled",
+        "isSafe": false
+      },
+      "source": "FDA Food Code: Cold food above 41°F is in Danger Zone",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-13",
+      "tier": "Advanced",
+      "category": "Audit Security",
+      "title": "Deterministic Cryptographic SHA-256 Receipt Generation",
+      "status": "PASS",
+      "observation": "Valid 64-character hexadecimal SHA-256 cryptographic digest generated: ef707895d8faaa46...",
+      "metricResult": {
+        "hashLength": 64,
+        "hashPreview": "ef707895d8faaa46"
+      },
+      "source": "NIST FIPS 180-4 SHA-256 Specification",
+      "durationMs": 1
+    },
+    {
+      "id": "VAL-14",
+      "tier": "Edge Case",
+      "category": "Overload Protection",
+      "title": "Vehicle Capacity Overload (Sedan Assigned 250 lbs)",
+      "status": "PASS",
+      "observation": "Overload guard triggered: 250 lbs exceeds Sedan capacity (90 lbs) by 278%.",
+      "metricResult": {
+        "isOverweight": true,
+        "maxCapacity": 90
+      },
+      "source": "Compact Sedan Trunk Safety Margin (Max 90 lbs)",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-15",
+      "tier": "Edge Case",
+      "category": "Perishable Expiration",
+      "title": "Already Expired Run (Minus 10 Minutes Left)",
+      "status": "PASS",
+      "observation": "Expired run caught: Displayed 'EXPIRED (Safety Window Exceeded)'.",
+      "metricResult": {
+        "urgency": "expired",
+        "minutesLeft": 0
+      },
+      "source": "System Safety Guard: Expired runs must display EXPIRED warning",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-16",
+      "tier": "Edge Case",
+      "category": "Form Boundary",
+      "title": "Fractional Weight and Decimal Scale Input (114.6 lbs)",
+      "status": "PASS",
+      "observation": "Fractional weight 114.6 lbs parsed correctly to 95.5 meals.",
+      "metricResult": {
+        "meals": 95.5
+      },
+      "source": "Certified Digital Hanging Scale Outputs",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-17",
+      "tier": "Negative Case",
+      "category": "Form Validation",
+      "title": "Zero Weight Input (0 lbs)",
+      "status": "PASS",
+      "observation": "Validation correctly rejected non-positive weight (0 lbs).",
+      "metricResult": {
+        "isValid": false
+      },
+      "source": "IRC § 170(e)(3) Validation Rules: Donation cannot be 0 lbs",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-18",
+      "tier": "Negative Case",
+      "category": "Form Validation",
+      "title": "Negative Weight Input (-15 lbs)",
+      "status": "PASS",
+      "observation": "Validation correctly rejected non-positive weight (-15 lbs).",
+      "metricResult": {
+        "isValid": false
+      },
+      "source": "Data Integrity Rules",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-19",
+      "tier": "Negative Case",
+      "category": "Form Validation",
+      "title": "Missing Item Description (Empty String)",
+      "status": "PASS",
+      "observation": "Validation correctly rejected empty/whitespace title.",
+      "metricResult": {
+        "isValid": false
+      },
+      "source": "Donor Manifest Requirements",
+      "durationMs": 0
+    },
+    {
+      "id": "VAL-20",
+      "tier": "Adversarial",
+      "category": "Input Sanitization",
+      "title": "Special Characters & HTML Tag Injection in Loading Dock Notes",
+      "status": "PASS",
+      "observation": "Script tag sanitized: 'alert('dock_exploit') Dock 4B & West Gate'.",
+      "metricResult": {
+        "sanitizedText": "alert('dock_exploit') Dock 4B & West Gate"
+      },
+      "source": "OWASP Input Validation Guideline",
+      "durationMs": 0
+    }
+  ]
+}
