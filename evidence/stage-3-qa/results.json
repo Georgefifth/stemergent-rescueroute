@@ -1,0 +1,206 @@
+{
+  "base": "https://stemergent-hacks-2026.vercel.app",
+  "browser": "chromium",
+  "headed": false,
+  "startedAt": "2026-11-01T15:51:24.303Z",
+  "finishedAt": "2026-11-01T15:51:45.149Z",
+  "summary": {
+    "total": 14,
+    "pass": 14,
+    "fail": 0
+  },
+  "results": [
+    {
+      "viewport": "desktop",
+      "id": "smoke",
+      "title": "Landing page renders and is usable",
+      "status": "pass",
+      "ms": 1862,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/smoke-landing-desktop.png"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "id": "core-claim-deliver",
+      "title": "End-to-End Volunteer Rescue Run Claim, Temp Check & Delivery",
+      "status": "pass",
+      "ms": 1223,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/core-claim-deliver-claimed-navigated-desktop.png",
+        "evidence/stage-3-qa/screens/core-claim-deliver-pickup-confirmed-desktop.png",
+        "evidence/stage-3-qa/screens/core-claim-deliver-delivery-completed-modal-desktop.png"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "id": "state-persistence",
+      "title": "State survives page reload and updates ledger",
+      "status": "pass",
+      "ms": 1794,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/state-persistence-ledger-persisted-desktop.png"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "id": "route-optimizer",
+      "title": "Multi-Stop TSP Vehicle Routing Optimization",
+      "status": "pass",
+      "ms": 2434,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/route-optimizer-route-optimizer-modal-desktop.png",
+        "evidence/stage-3-qa/screens/route-optimizer-route-dispatched-driver-manifest-desktop.png"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "id": "donation-form-validation",
+      "title": "New Surplus Alert Form Validation & Submission",
+      "status": "pass",
+      "ms": 1071,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/donation-form-validation-form-validation-error-desktop.png",
+        "evidence/stage-3-qa/screens/donation-form-validation-new-donation-created-desktop.png"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "id": "tax-receipt-audit",
+      "title": "Tax Receipt Modal & Keyboard Dismiss",
+      "status": "pass",
+      "ms": 1082,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/tax-receipt-audit-tax-receipt-open-desktop.png"
+      ]
+    },
+    {
+      "viewport": "desktop",
+      "id": "filter-and-empty-state",
+      "title": "Filter Toggles and Filter-Zero Recovery State",
+      "status": "pass",
+      "ms": 1467,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/filter-and-empty-state-filter-zero-state-desktop.png",
+        "evidence/stage-3-qa/screens/filter-and-empty-state-filters-restored-desktop.png"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "id": "smoke",
+      "title": "Landing page renders and is usable",
+      "status": "pass",
+      "ms": 852,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/smoke-landing-mobile.png"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "id": "core-claim-deliver",
+      "title": "End-to-End Volunteer Rescue Run Claim, Temp Check & Delivery",
+      "status": "pass",
+      "ms": 1230,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/core-claim-deliver-claimed-navigated-mobile.png",
+        "evidence/stage-3-qa/screens/core-claim-deliver-pickup-confirmed-mobile.png",
+        "evidence/stage-3-qa/screens/core-claim-deliver-delivery-completed-modal-mobile.png"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "id": "state-persistence",
+      "title": "State survives page reload and updates ledger",
+      "status": "pass",
+      "ms": 1308,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/state-persistence-ledger-persisted-mobile.png"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "id": "route-optimizer",
+      "title": "Multi-Stop TSP Vehicle Routing Optimization",
+      "status": "pass",
+      "ms": 2423,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/route-optimizer-route-optimizer-modal-mobile.png",
+        "evidence/stage-3-qa/screens/route-optimizer-route-dispatched-driver-manifest-mobile.png"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "id": "donation-form-validation",
+      "title": "New Surplus Alert Form Validation & Submission",
+      "status": "pass",
+      "ms": 1245,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/donation-form-validation-form-validation-error-mobile.png",
+        "evidence/stage-3-qa/screens/donation-form-validation-new-donation-created-mobile.png"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "id": "tax-receipt-audit",
+      "title": "Tax Receipt Modal & Keyboard Dismiss",
+      "status": "pass",
+      "ms": 1076,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/tax-receipt-audit-tax-receipt-open-mobile.png"
+      ]
+    },
+    {
+      "viewport": "mobile",
+      "id": "filter-and-empty-state",
+      "title": "Filter Toggles and Filter-Zero Recovery State",
+      "status": "pass",
+      "ms": 1581,
+      "error": null,
+      "errors": [],
+      "warnings": [],
+      "screenshots": [
+        "evidence/stage-3-qa/screens/filter-and-empty-state-filter-zero-state-mobile.png",
+        "evidence/stage-3-qa/screens/filter-and-empty-state-filters-restored-mobile.png"
+      ]
+    }
+  ]
+}
