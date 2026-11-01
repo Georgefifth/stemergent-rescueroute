@@ -32,3 +32,4 @@ dist-ssr
 id_rsa
 credentials
 .vercel
+.env*
