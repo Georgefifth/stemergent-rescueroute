@@ -59,6 +59,7 @@ export const TaxReceiptModal: React.FC<TaxReceiptModalProps> = ({ isOpen, onClos
             </button>
             <button
               onClick={onClose}
+              aria-label="Close receipt modal"
               className="text-slate-400 hover:text-white transition-colors p-1"
             >
               <X className="w-5 h-5" />

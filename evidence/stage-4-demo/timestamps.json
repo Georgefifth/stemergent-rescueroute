@@ -1,0 +1,223 @@
+[
+  {
+    "idx": 0,
+    "name": "01-title-hook",
+    "isCard": true,
+    "url": null,
+    "file": "/home/yap/Hack/stemergent-hacks-2026/evidence/stage-4-demo/raw/scene-00.webm",
+    "wallMs": 9655,
+    "trimStart": 0.17,
+    "focus": [],
+    "sfx": []
+  },
+  {
+    "idx": 1,
+    "name": "02-problem-comparison",
+    "isCard": true,
+    "url": null,
+    "file": "/home/yap/Hack/stemergent-hacks-2026/evidence/stage-4-demo/raw/scene-01.webm",
+    "wallMs": 10031,
+    "trimStart": 0,
+    "focus": [],
+    "sfx": [
+      {
+        "type": "whoosh",
+        "t": 0.09
+      }
+    ]
+  },
+  {
+    "idx": 2,
+    "name": "03-live-dispatch-console",
+    "isCard": false,
+    "session": "app",
+    "url": "http://127.0.0.1:5188",
+    "focus": [
+      {
+        "t": 2.93,
+        "x": 965,
+        "y": 499
+      },
+      {
+        "t": 3.6,
+        "x": 463,
+        "y": 1254
+      }
+    ],
+    "sfx": [
+      {
+        "type": "whoosh",
+        "t": 0.65
+      },
+      {
+        "type": "click",
+        "t": 3.55
+      }
+    ],
+    "file": "/home/yap/Hack/stemergent-hacks-2026/evidence/stage-4-demo/raw/session-app.webm",
+    "range": [
+      0.02,
+      7.19
+    ]
+  },
+  {
+    "idx": 3,
+    "name": "04-live-driver-manifest",
+    "isCard": false,
+    "session": "app",
+    "url": "http://127.0.0.1:5188",
+    "focus": [
+      {
+        "t": 2.71,
+        "x": 932,
+        "y": 672
+      },
+      {
+        "t": 3.44,
+        "x": 840,
+        "y": 804
+      },
+      {
+        "t": 4.02,
+        "x": 971,
+        "y": 878
+      }
+    ],
+    "sfx": [
+      {
+        "type": "whoosh",
+        "t": 0.63
+      },
+      {
+        "type": "type",
+        "t": 3.25,
+        "chars": 3,
+        "keyTimes": [
+          3.252,
+          3.311,
+          3.371
+        ]
+      },
+      {
+        "type": "click",
+        "t": 3.97
+      }
+    ],
+    "file": "/home/yap/Hack/stemergent-hacks-2026/evidence/stage-4-demo/raw/session-app.webm",
+    "range": [
+      7.19,
+      14.62
+    ]
+  },
+  {
+    "idx": 4,
+    "name": "05-live-tax-receipt",
+    "isCard": false,
+    "session": "app",
+    "url": "http://127.0.0.1:5188",
+    "focus": [
+      {
+        "t": 0.57,
+        "x": 971,
+        "y": 958
+      },
+      {
+        "t": 3.8,
+        "x": 951,
+        "y": 567
+      }
+    ],
+    "sfx": [
+      {
+        "type": "click",
+        "t": 0.51
+      },
+      {
+        "type": "whoosh",
+        "t": 1.21
+      }
+    ],
+    "file": "/home/yap/Hack/stemergent-hacks-2026/evidence/stage-4-demo/raw/session-app.webm",
+    "range": [
+      14.62,
+      21.84
+    ]
+  },
+  {
+    "idx": 5,
+    "name": "06-live-route-optimizer",
+    "isCard": false,
+    "session": "app",
+    "url": "http://127.0.0.1:5188",
+    "focus": [
+      {
+        "t": 0.75,
+        "x": 1260,
+        "y": 100
+      },
+      {
+        "t": 1.32,
+        "x": 1151,
+        "y": 62
+      },
+      {
+        "t": 2.01,
+        "x": 1055,
+        "y": 1252
+      },
+      {
+        "t": 2.73,
+        "x": 1435,
+        "y": 24
+      },
+      {
+        "t": 5.65,
+        "x": 948,
+        "y": 992
+      }
+    ],
+    "sfx": [
+      {
+        "type": "click",
+        "t": 0.65
+      },
+      {
+        "type": "click",
+        "t": 1.28
+      },
+      {
+        "type": "click",
+        "t": 1.96
+      },
+      {
+        "type": "click",
+        "t": 2.65
+      },
+      {
+        "type": "whoosh",
+        "t": 3.38
+      }
+    ],
+    "file": "/home/yap/Hack/stemergent-hacks-2026/evidence/stage-4-demo/raw/session-app.webm",
+    "range": [
+      21.84,
+      30.92
+    ]
+  },
+  {
+    "idx": 6,
+    "name": "07-impact-metrics",
+    "isCard": true,
+    "url": null,
+    "file": "/home/yap/Hack/stemergent-hacks-2026/evidence/stage-4-demo/raw/scene-06.webm",
+    "wallMs": 9526,
+    "trimStart": 0,
+    "focus": [],
+    "sfx": [
+      {
+        "type": "whoosh",
+        "t": 0.09
+      }
+    ]
+  }
+]
